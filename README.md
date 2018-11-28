@@ -1,6 +1,4 @@
-# rails-cheat-sheet
-
-## routes
+# routes
 
 ```ruby
 # (get/post/update/delete) url to: 'controller#action', as: helper_name
@@ -27,14 +25,14 @@ delete 'photos/:id'       to: 'photos#destroy'
 #   edit_photo_path(:id)
 ```
 
-## generateurs (et migrations?)
+# generateurs (et migrations?) (plutot les mettre dans chaque sous partie?)
 
-## modèles
+# modèles (et relations + leur migrations)
 
-## controlleurs
+# controlleurs
 
-## vues
+# vues
 
-## helpers
+# helpers
 
-## migrations classiques
+# migrations classiques
