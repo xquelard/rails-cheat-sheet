@@ -26,3 +26,15 @@ delete 'photos/:id'       to: 'photos#destroy'
 #   new_photo_path
 #   edit_photo_path(:id)
 ```
+
+## generateurs (et migrations?)
+
+## modèles
+
+## controlleurs
+
+## vues
+
+## helpers
+
+## migrations classiques
