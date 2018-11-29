@@ -28,6 +28,13 @@ delete 'photos/:id'       to: 'photos#destroy'
 # generateurs (et migrations?) (plutot les mettre dans chaque sous partie?)
 
 # modèles (et relations + leur migrations)
+## bases
+
+##validation
+
+## callbacks
+
+## associations
 
 # controlleurs
 
