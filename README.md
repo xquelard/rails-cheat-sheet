@@ -121,6 +121,19 @@ end
 Person.create(name: "John Doe").valid? # => true
 Person.create(name: nil).invalid? # => true
 ```
+
+Plus d'options de validation : 
+
+```ruby
+class Person < ApplicationRecord
+  validates :name, 
+    presence: true, # has to be filled
+    allow_nil: true, # can be nil, in opposition to presence
+    allow_blank: true, #replace true with {message: "blablah"} to fill the .errors
+    on: :create
+    
+end
+```
  
 ## callbacks
 
