@@ -102,8 +102,26 @@ user.destroy # destroy_all exists too
 
 ## validation
 
+Les validations s'écrivent directement dans les modèles. Les méthodes suivantes provoquent toutes une vérification des règles de validation (les versions bang des méthodes lèvent une exception, `save` et `update` renvoient `false` en case d'erreur, et `create` renvoi simplement l'objet) : 
 
+- create
+- create!
+- save ( en ajoutant l'attribut `validate: false` , on peut passer la validation)
+- save!
+- update
+- update!
 
+Il est également possible de checker manuellement si les règles de validations fonctionnent avec les méthodes `valid?` ou `invalid?` (appeller ces méthodes trigger les validations, et remplissent donc le `object.errors.messages` , tout comme un appel à `save()` le ferait) : 
+
+```ruby
+class Person < ApplicationRecord
+  validates :name, presence: true
+end
+false
+Person.create(name: "John Doe").valid? # => true
+Person.create(name: nil).invalid? # => true
+```
+ 
 ## callbacks
 
 ## associations
