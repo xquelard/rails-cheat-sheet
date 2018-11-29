@@ -32,7 +32,7 @@ delete 'photos/:id'       to: 'photos#destroy'
 
 Les modèles sont la partie "M" du MVC. Ils donnent accès à la base de données via un ORM (Object Relational Mapping), sont utilisés pour la validation côté serveur, et facilitent la création d'association entre différentes tables. La commande : 
 
-```shell
+```bash
 rails g model posts
 ```
 
