@@ -44,6 +44,23 @@ Les modèles sont la partie "M" du MVC. Ils donnent accès à la base de donnée
 rails g model posts
 ```
 
+créé le modèle et la migration suivantes : 
+
+```ruby
+#app/models/post.rb
+class Post < ApplicationRecord
+end
+
+#db/migrate/timestamp_create_posts.rb
+class CreatePosts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :posts do |t|
+
+      t.timestamps
+    end
+  end
+end
+```
 
 ## validation
 
