@@ -27,6 +27,14 @@ delete 'photos/:id'       to: 'photos#destroy'
 
 # generateurs (et migrations?) (plutot les mettre dans chaque sous partie?)
 
+# conventions de nommage
+
+|   | Model name | Controller name     | Table | and files (views directory + controller file) names |
+|---|------------|---------------------|-----------------------------------------------------------|---|
+|   | Post       | PostsController     | posts | posts/ and posts_controller.rb  |
+|   | LineItem   | LineItemsController | line_items | line_items/ and line_items_controller.rb  |
+|   | Mouse      | MiceController      | mice | mice/ and mice_controller.rb  |
+
 # modèles (et relations + leur migrations)
 ## bases
 
@@ -35,6 +43,7 @@ Les modèles sont la partie "M" du MVC. Ils donnent accès à la base de donnée
 ```bash
 rails g model posts
 ```
+
 
 ## validation
 
