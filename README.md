@@ -41,6 +41,7 @@ delete 'photos/:id'       to: 'photos#destroy'
 Les modèles sont la partie "M" du MVC. Ils donnent accès à la base de données via un ORM (Object Relational Mapping), sont utilisés pour la validation côté serveur, et facilitent la création d'association entre différentes tables. La commande : 
 
 ```bash
+# can use --force-plural if the default plural value is not fitting
 rails g model posts
 ```
 
@@ -85,7 +86,6 @@ david = User.find_by(name: 'David')
 
 # UPDATING
 
-
 user = User.find_by(name: 'David')
 user.name = 'Dave'
 user.save
@@ -101,6 +101,8 @@ user.destroy # destroy_all exists too
 ```
 
 ## validation
+
+
 
 ## callbacks
 
