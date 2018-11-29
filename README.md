@@ -29,13 +29,13 @@ delete 'photos/:id'       to: 'photos#destroy'
 
 # conventions de nommage
 
-|   | Model name | Controller name     | Table | and files (views directory + controller file) names |
+|   | Model name | Controller name     | Table | Files (views directory + controller file) name |
 |---|------------|---------------------|-----------------------------------------------------------|---|
 |   | Post       | PostsController     | posts | posts/ and posts_controller.rb  |
 |   | LineItem   | LineItemsController | line_items | line_items/ and line_items_controller.rb  |
 |   | Mouse      | MiceController      | mice | mice/ and mice_controller.rb  |
 
-# modèles (et relations + leur migrations)
+# modèles
 ## bases
 
 Les modèles sont la partie "M" du MVC. Ils donnent accès à la base de données via un ORM (Object Relational Mapping), sont utilisés pour la validation côté serveur, et facilitent la création d'association entre différentes tables. La commande : 
@@ -117,7 +117,7 @@ Il est également possible de checker manuellement si les règles de validations
 class Person < ApplicationRecord
   validates :name, presence: true
 end
-false
+
 Person.create(name: "John Doe").valid? # => true
 Person.create(name: nil).invalid? # => true
 ```
