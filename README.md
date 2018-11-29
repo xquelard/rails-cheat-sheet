@@ -62,6 +62,44 @@ class CreatePosts < ActiveRecord::Migration[5.2]
 end
 ```
 
+## ORM
+
+```ruby
+# CREATING
+
+user = User.new
+user.name = "David"
+user.occupation = "Code Artist"
+user.save
+
+# same as above as
+user = User.create(name: "David", occupation: "Code Artist")
+
+
+# SEARCHNG
+
+User.all.where(name: "David", occupation: "Code Artist").order(created_at: :desc)
+user = User.first
+david = User.find_by(name: 'David')
+
+
+# UPDATING
+
+
+user = User.find_by(name: 'David')
+user.name = 'Dave'
+user.save
+
+# same as above
+User.find_by(name: 'David').update(name: 'Dave') # update_all exists too
+
+
+# DELETING
+
+user = User.find_by(name: 'David')
+user.destroy # destroy_all exists too
+```
+
 ## validation
 
 ## callbacks
